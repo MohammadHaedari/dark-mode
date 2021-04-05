@@ -10,7 +10,7 @@
     --light: #ffffff;
     --light2: #f5f5f5;
     --green: #52BE80;
-    --purple: #0082a3;
+    --blue: #0082a3;
     --special: rgb(42, 220, 252);
 }
 body{
@@ -104,14 +104,6 @@ nav{
         gap: 2rem;
     }
 }
-
-
-
-
-
-
-
-
   .icon{
     animation-name:rotate;
     animation-duration: 5s;
