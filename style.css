@@ -81,6 +81,7 @@ nav{
 }
 #label{
     margin-top: 50px;
+    font-size: 42px;
 }
 #informations{
     background-color: var(--dark2);
