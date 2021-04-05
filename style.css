@@ -9,7 +9,7 @@
     --dark2: #323232;
     --light: #ffffff;
     --light2: #f5f5f5;
-    --green: #52BE80;
+    --green: #2e996c;
     --blue: #0082a3;
     --special: rgb(42, 220, 252);
 }
@@ -54,6 +54,9 @@ nav{
     box-shadow: none;
 }
 @media screen and (max-width: 500px){
+    .icon{
+        width: 250px;
+    }
     nav h1{
         display: none;
     }
@@ -76,12 +79,11 @@ nav{
     width: 300px;
     transition: .5s;
 }
+#label{
+    font-size: 42px;
+}
 .icon:hover{
     animation-duration: .01s;
-}
-#label{
-    margin-top: 50px;
-    font-size: 42px;
 }
 #informations{
     background-color: var(--dark2);
@@ -103,9 +105,30 @@ nav{
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
+        padding-top: 60px;
     }
 }
-  .icon{
+@media screen and (max-width: 500px){
+    .icon{
+        width: 250px;
+    }
+    #label{
+        font-size: 30px;
+    }
+    #informations{
+        width: 250px;
+    }
+}
+@media screen and (max-width: 340px){
+    .icon{
+        width: 200px;
+    }
+    #informations{
+        width: 200px;
+        padding: 20px 10px;
+    }
+}
+.icon{
     animation-name:rotate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
