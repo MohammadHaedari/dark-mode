@@ -110,7 +110,7 @@ nav{
 }
 @media screen and (max-width: 500px){
     .icon{
-        width: 250px;
+        width: 240px;
     }
     #label{
         font-size: 30px;
