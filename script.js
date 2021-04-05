@@ -19,7 +19,7 @@ function selectMode(mode) {
         informationstext = "Hover sun if you are bored";
     } else {
         color = "var(--light)";
-        backgroundcolor = "linear-gradient(45deg,var(--green),var(--purple),var(--green))";
+        backgroundcolor = "linear-gradient(45deg,var(--green),var(--blue),var(--green))";
         image = "img/worldwide.png"
         label = "Special Mode";
         informationscolor = "var(--light)";
