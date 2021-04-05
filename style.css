@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: calibri;
+}
+:root{
+    --dark: #1b1b1b;
+    --dark2: #323232;
+    --light: #ffffff;
+    --light2: #f5f5f5;
+    --green: #52BE80;
+    --purple: #0082a3;
+    --special: rgb(42, 220, 252);
+}
+body{
+    background-color: var(--dark);
+}
+header{
+    background-color: #000;
+    color: var(--light);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+}
+.menu button{
+    background: none;
+    color: var(--light);
+    border: 2px solid var(--light);
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 2px 2px 2px #000;
+}
+.menu button:hover{
+    background: var(--light);
+    color: var(--dark);
+    box-shadow: none;
+}
+@media screen and (max-width: 500px){
+    nav h1{
+        display: none;
+    }
+    nav{
+        justify-content: center;
+    }
+}
+.theme{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--dark);
+    color: var(--light);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+}
+.icon{
+    width: 300px;
+    transition: .5s;
+}
+.icon:hover{
+    animation-duration: .01s;
+}
+#label{
+    margin-top: 50px;
+}
+#informations{
+    background-color: var(--dark2);
+    width: 300px;
+    padding: 30px 0;
+    margin-top: 30px;
+    align-items: center;
+    border-radius: 20px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+@media screen and (max-width: 900px){
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+  .icon{
+    animation-name:rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+
+ .icon , .icon:before , .react-logo:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .icon:before , .icon:after{
+    content:"";
+  }
+
+  .icon:after{
+    transform:rotate(-57deg);
+  }
+
+  .icon:before{
+    transform:rotate(57deg);
+  }
+  
+  @keyframes rotate{
+
+    100%{
+      transform:rotate(360deg);
+    }
+  }
