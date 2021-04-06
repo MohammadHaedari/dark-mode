@@ -10,28 +10,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1 class="logo">Dark Mode</h1>
-            <ul class="menu">
+        <span id="burger" class="burger" onclick="openNav()">&#9776;</span>
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
                 <li><button id="Dark-btn" onclick="selectMode('dark')">Dark Mode</button></li>
                 <li><button id="Light-btn" onclick="selectMode('light')">Light Mode</button></li>
                 <li><button id="Special-btn" onclick="selectMode('special')">Special Mode</button></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <center>
-        <div class="theme" id="theme">
-            <div class="main">
-            <div class="image">
-            <img class="icon" id="icon" src="img/moon.png">
-            </div>
-            <div>
-            <p id="label">Dark Mode</p>
-            <p id="informations">Hover moon if you are bored</p>
-            </div>
             </div>
         </div>
+    </header>
+
+    <main>
+        <center>
+            <div class="theme" id="theme">
+                <div class="main">
+                    <div class="image">
+                        <img class="icon" id="icon" src="img/moon.png">
+                    </div>
+                    <div>
+                        <p id="label">Dark Mode</p>
+                        <p id="informations">Hover moon if you are bored</p>
+                    </div>
+                </div>
+            </div>
         </center>
     </main>
     <footer>
