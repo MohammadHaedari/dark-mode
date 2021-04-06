@@ -139,7 +139,7 @@ nav{
 
   }
 
- .icon , .icon:before , .react-logo:after {
+ .icon , .icon:before , .icon:after {
     display: flex;
     align-items: center;
     justify-content: center;
