@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     font-family: calibri;
+    text-decoration: none;
 }
 :root{
     --dark: #1b1b1b;
@@ -16,53 +17,55 @@
 body{
     background-color: var(--dark);
 }
-header{
-    background-color: #000;
-    color: var(--light);
+#burger{
+    color: white;
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 10px 20px;
-}
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
-.menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    gap: 1rem;
-}
-.menu button{
-    background: none;
-    color: var(--light);
-    border: 2px solid var(--light);
-    outline: none;
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    cursor: pointer;
     transition: .3s;
-    box-shadow: 2px 2px 2px #000;
 }
-.menu button:hover{
-    background: var(--light);
-    color: var(--dark);
-    box-shadow: none;
+#burger:hover{
+    opacity: 0.5;
 }
-@media screen and (max-width: 500px){
-    .icon{
-        width: 250px;
-    }
-    nav h1{
-        display: none;
-    }
-    nav{
-        justify-content: center;
-    }
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.726);
+    overflow-x: hidden;
+    transition: .3s;
+  }
+  
+.overlay-content{
+    position: relative;
+    top: 35%;
+    width: 100%;
+  }
+  
+.overlay button{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    width: 170px;
+    text-align: left;
+    transition: .3s;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+  
+.overlay button:hover, .overlay button:focus{
+    color: var(--light2);
+    transform: translateX(10px);
 }
 .theme{
     display: flex;
@@ -75,6 +78,13 @@ nav{
     align-items: center;
     align-content: center;
 }
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    gap: 10rem;
+}
 .icon{
     width: 300px;
     transition: .5s;
@@ -83,7 +93,7 @@ nav{
     font-size: 42px;
 }
 .icon:hover{
-    animation-duration: .01s;
+    animation-duration: .2s;
 }
 #informations{
     background-color: var(--dark2);
@@ -93,27 +103,61 @@ nav{
     align-items: center;
     border-radius: 20px;
 }
-.main{
+.icon{
+    animation-name:rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+.icon , .icon:before , .icon:after {
     display: flex;
-    justify-content: space-around;
-    align-content: center;
     align-items: center;
-    gap: 10rem;
+    justify-content: center;
+  }
+ 
+.icon:before , .icon:after{
+    content:"";
+  }
+
+.icon:after{
+    transform:rotate(-57deg);
+  }
+
+.icon:before{
+    transform:rotate(57deg);
+  }
+  
+@keyframes rotate{
+
+    100%{
+      transform:rotate(360deg);
+    }
 }
+
 @media screen and (max-width: 900px){
     .main{
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
-        padding-top: 60px;
+        padding: 20px 0;
     }
-    #label{
-        margin-top: 20px;
+    #burger{
+        cursor: default;
+    }
+    .overlay button{
+        cursor: default;
     }
 }
 @media screen and (max-width: 500px){
     .icon{
         width: 240px;
+    }
+    nav h1{
+        display: none;
+    }
+    nav{
+        justify-content: center;
     }
     #label{
         font-size: 30px;
@@ -131,35 +175,3 @@ nav{
         padding: 20px 10px;
     }
 }
-.icon{
-    animation-name:rotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-  }
-
- .icon , .icon:before , .icon:after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
- 
-  .icon:before , .icon:after{
-    content:"";
-  }
-
-  .icon:after{
-    transform:rotate(-57deg);
-  }
-
-  .icon:before{
-    transform:rotate(57deg);
-  }
-  
-  @keyframes rotate{
-
-    100%{
-      transform:rotate(360deg);
-    }
-  }
